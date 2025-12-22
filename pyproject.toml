@@ -1,0 +1,19 @@
+[project]
+name = "notekeeper"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "auto-py-to-exe (>=2.48.1)",
+    "poetry-core (>=2.0.0)",
+    "pyinstaller (>=6.17.0,<7.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
