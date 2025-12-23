@@ -1,6 +1,5 @@
 import json
-
-from supportMethods import clear_screen, open_file
+from supportMethods import clear_screen, open_file, save, quick_save
 
 
 # Для створення нового елементу(нотатки)
@@ -11,8 +10,10 @@ def new_note(file_name):
     note_header = ""
 
     try:
+        
+        note_header = input("Enter a note header: ")
 
-        print("\nWrite new text:")
+        print("\nWrite a text:")
         print("(Enter for end)")
         while True:
             line = input()
