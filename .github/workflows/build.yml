@@ -25,7 +25,7 @@ jobs:
 
     - name: Build EXE with PyInstaller
       run: |
-        pyinstaller --onefile --windowed main.py  
+        pyinstaller --onefile --console NoteKeeper/main.py
         # --onefile збирає все в один .exe
         # --windowed прибирає консоль при запуску (якщо треба)
 
