@@ -11,10 +11,11 @@ def open_file(file_name):
     try:
         with open(file_name, 'r', encoding='utf-8') as file:
             note = json.load(file)
+            return note
     except FileNotFoundError:
         note = [{"id": 1, "header": "Hello World!", "text": "Your first Note"}]
         print("File not found, created new one")
-
+        
 
 # Для збереження функції
 def save(note, f_name):
@@ -32,15 +33,3 @@ def quick_save(file_name, note_header, lines):
     note.append(extra_save)
 
     save(note, file_name)
-
-
-# Відкриває файл userNote.json
-def open_file(file_name):
-    try:
-        with open(file_name, 'r', encoding='utf-8') as file:
-            note = json.load(file)
-    except FileNotFoundError:
-        note = [{"id": 1, "header": "Hello World!", "text": "Your first Note"}]
-        print("File not found, created new one")
-
-    return note

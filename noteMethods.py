@@ -28,7 +28,7 @@ def new_note(file_name):
 
         note.append(new_note)
 
-        save(note)
+        save(note, file_name)
 
         clear_screen()
         print("Збережено файл")
@@ -76,7 +76,7 @@ def delete_note(file_name):
         except ValueError:
             print("Enter a digit.\n")
 
-    save(note)
+    save(note, file_name)
 
     print()
     print("Notes: ")
@@ -127,7 +127,7 @@ def edit_note(file_name):
     if new_note_text != "":
         note[founded_id]['text'] = new_note_text
 
-    save(note)
+    save(note, file_name)
     input("Note edited, Press Enter.")
 
 
