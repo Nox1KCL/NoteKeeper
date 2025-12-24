@@ -1,15 +1,19 @@
 from supportMethods import clear_screen
-from noteMethods import new_note, delete_note, view_notes, edit_note
+from noteMethods import new_note, delete_note, display_notes, edit_note, open_file, save
 
 
 # region Main
-f_name = "userNotes.json"
+file_name = "userNotes.json"
+
 while True:
     try:
+        notes = open_file(file_name)
+
         clear_screen()
         print("-" * 23)
         print("\tNotes")
         print("-" * 23)
+
         while True:
             try:
                 user_option = int(input("Choose option"
@@ -24,17 +28,20 @@ while True:
                 print("Write a digit.\n")
         match user_option:
             case 1:
-                new_note(f_name)
+                new_note(file_name)
             case 2:
-                delete_note(f_name)
+                delete_note(file_name)
             case 3:
-                view_notes(f_name)
+                display_notes(notes, "all_info")
             case 4:
-                edit_note(f_name)
+                edit_note(file_name)
             case 5:
                 print("Turning off..")
                 break
     except KeyboardInterrupt:
         clear_screen()
         print("Suddenly break.. Turning Off")
+    finally:
+        notes = open_file(file_name)
+        save(notes, file_name)
 # endregion

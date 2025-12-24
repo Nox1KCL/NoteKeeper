@@ -1,17 +1,27 @@
 [
     {
         "id": 1,
-        "header": "fsadd",
-        "text": "sad"
+        "header": "Hello World!",
+        "text": "Your first Note"
     },
     {
         "id": 2,
-        "header": "sdafads",
-        "text": "sadf"
+        "header": "dsfas",
+        "text": "asdfasd\nasdf"
     },
     {
         "id": 3,
+        "header": "asdfasd",
+        "text": "sadfasdf\nasdf"
+    },
+    {
+        "id": 4,
+        "header": "asdfasdf",
+        "text": "sadfasdf\nasdfads"
+    },
+    {
+        "id": 5,
         "header": "asdfads",
-        "text": "asdf"
+        "text": "sadfadsf\nsadfasd"
     }
 ]
