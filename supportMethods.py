@@ -16,9 +16,8 @@ def open_file(f_name: str) -> list:
             return json.load(file)
         
     except FileNotFoundError:
-        notes = [{"id": 1, "header": "Hello World!", "text": "Your first Note"}]
         print("File not found, created new one")
-        return notes
+        return []
 
 
 # Для збереження функції
